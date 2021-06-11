@@ -25,6 +25,25 @@
 
 </style>
 <script>
+function myOnloadFunc(){
+	var objDate = new Date();
+	var hours = objDate.getHours();
+	if(hours >= 12 && hours <= 16){
+	    document.write('Good Afternoon Shyaren :p');
+	}
+	else if(hours > 16 && hours <= 19){{
+	    document.write('Good Evening Shyaren :p');
+	}
+	else if(hours > 19 && hours <= 24){{
+	    document.write('Good Night Shyaren :p');
+	}
+	else if(hours >= 0 && hours <= 5){{
+	    document.write('Hayoooo belum tidur ya Shyaren :p');
+	}
+	else if(hours > 4 && hours <= 12){{
+	    document.write('Good Morning Shyaren :p');
+	}
+}
 function tambah() {
     document.getElementById("mbabiId").value=parseInt(document.getElementById("mbabiId").value)+1;
     document.getElementById("nomor").value=document.getElementById("mbabiId").value;
@@ -69,7 +88,7 @@ function submit(){
 	}
 }
 </script>
-<body >
+<body onload="myOnloadFunc();">
 	<div style="background: url(shyaren1.jpeg); width:100%; height: 100%;">
 		<div id="rcorners1" style="top: 50%; left: 30%; position: absolute;">
 			<input type="text" id="nomor" placeholder="Disini Nilai Mbabi" style="width: 100%;height: 100%; border: 0px none;">
