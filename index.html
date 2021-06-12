@@ -38,6 +38,8 @@ function myOnloadFunc(){
 	    alert('Good Night Shyaren :p');
 	}
 	else if(hours >= 0 && hours <= 5){
+		var audio = new Audio('Subuh.mp3');
+		audio.play();
 	    alert('Hayoooo belum tidur ya Shyaren :p');
 	}
 	else if(hours > 4 && hours <= 12){
